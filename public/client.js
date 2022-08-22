@@ -1,6 +1,6 @@
 //this initatin the socker and connect with the server
-const socket = io({ extraHeaders: { time: getTime() } });
 const username = getUsername(document.cookie);
+const socket = io({ extraHeaders: { name: username } });
 //here we are getting the elemnt from the html DOM to add event lertiner
 const button = document.getElementById("send-button");
 button.onclick = sendMessage;
